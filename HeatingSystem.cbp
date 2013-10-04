@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HeatingSystem" />
+		<Option pch_mode="2" />
+		<Option compiler="armelfgcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/HeatingSystem.elf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/HeatingSystem.elf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-O2" />
+			<Add option="-fno-common" />
+			<Add option="-mcpu=cortex-m4" />
+			<Add option="-mthumb" />
+			<Add option="-mfpu=fpv4-sp-d16" />
+			<Add option="-mfloat-abi=softfp" />
+			<Add directory="src" />
+			<Add directory="h" />
+			<Add directory="CMSIS/inc" />
+			<Add directory="FreeRTOS/inc" />
+			<Add directory="SPL/inc" />
+		</Compiler>
+		<Linker>
+			<Add option="-s" />
+			<Add option="-Wl,-Map,map.txt" />
+			<Add option="-T stm32_flash.ld" />
+			<Add option="-mcpu=cortex-m4" />
+			<Add option="-mthumb" />
+			<Add option="-Wl" />
+		</Linker>
+		<Unit filename="CMSIS/inc/arm_common_tables.h" />
+		<Unit filename="CMSIS/inc/arm_math.h" />
+		<Unit filename="CMSIS/inc/core_cm0.h" />
+		<Unit filename="CMSIS/inc/core_cm0plus.h" />
+		<Unit filename="CMSIS/inc/core_cm3.h" />
+		<Unit filename="CMSIS/inc/core_cm4.h" />
+		<Unit filename="CMSIS/inc/core_cm4_simd.h" />
+		<Unit filename="CMSIS/inc/core_cmFunc.h" />
+		<Unit filename="CMSIS/inc/core_cmInstr.h" />
+		<Unit filename="CMSIS/inc/core_sc000.h" />
+		<Unit filename="CMSIS/inc/core_sc300.h" />
+		<Unit filename="CMSIS/inc/stm32f4xx.h" />
+		<Unit filename="CMSIS/inc/system_stm32f4xx.h" />
+		<Unit filename="CMSIS/src/system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/inc/FreeRTOS.h" />
+		<Unit filename="FreeRTOS/inc/FreeRTOSConfig.h" />
+		<Unit filename="FreeRTOS/inc/StackMacros.h" />
+		<Unit filename="FreeRTOS/inc/croutine.h" />
+		<Unit filename="FreeRTOS/inc/list.h" />
+		<Unit filename="FreeRTOS/inc/mpu_wrappers.h" />
+		<Unit filename="FreeRTOS/inc/portable.h" />
+		<Unit filename="FreeRTOS/inc/portmacro.h" />
+		<Unit filename="FreeRTOS/inc/projdefs.h" />
+		<Unit filename="FreeRTOS/inc/queue.h" />
+		<Unit filename="FreeRTOS/inc/semphr.h" />
+		<Unit filename="FreeRTOS/inc/task.h" />
+		<Unit filename="FreeRTOS/inc/timers.h" />
+		<Unit filename="FreeRTOS/src/croutine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/heap_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/readme.txt" />
+		<Unit filename="FreeRTOS/src/tasks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/src/timers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/inc/misc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_adc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_can.h" />
+		<Unit filename="SPL/inc/stm32f4xx_crc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_cryp.h" />
+		<Unit filename="SPL/inc/stm32f4xx_dac.h" />
+		<Unit filename="SPL/inc/stm32f4xx_dbgmcu.h" />
+		<Unit filename="SPL/inc/stm32f4xx_dcmi.h" />
+		<Unit filename="SPL/inc/stm32f4xx_dma.h" />
+		<Unit filename="SPL/inc/stm32f4xx_exti.h" />
+		<Unit filename="SPL/inc/stm32f4xx_flash.h" />
+		<Unit filename="SPL/inc/stm32f4xx_fsmc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_gpio.h" />
+		<Unit filename="SPL/inc/stm32f4xx_hash.h" />
+		<Unit filename="SPL/inc/stm32f4xx_i2c.h" />
+		<Unit filename="SPL/inc/stm32f4xx_iwdg.h" />
+		<Unit filename="SPL/inc/stm32f4xx_pwr.h" />
+		<Unit filename="SPL/inc/stm32f4xx_rcc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_rng.h" />
+		<Unit filename="SPL/inc/stm32f4xx_rtc.h" />
+		<Unit filename="SPL/inc/stm32f4xx_sdio.h" />
+		<Unit filename="SPL/inc/stm32f4xx_spi.h" />
+		<Unit filename="SPL/inc/stm32f4xx_syscfg.h" />
+		<Unit filename="SPL/inc/stm32f4xx_tim.h" />
+		<Unit filename="SPL/inc/stm32f4xx_usart.h" />
+		<Unit filename="SPL/inc/stm32f4xx_wwdg.h" />
+		<Unit filename="SPL/src/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_cryp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_cryp_aes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_cryp_des.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_cryp_tdes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_dbgmcu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_dcmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_hash_md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_hash_sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_rng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_syscfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL/src/stm32f4xx_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="startup_stm32f4xx.s" />
+		<Unit filename="stm32_flash.ld" />
+		<Unit filename="stm32f4xx_conf.h" />
+		<Extensions>
+			<debugger />
+			<debugger>
+				<remote_debugging>
+					<options conn_type="0" />
+				</remote_debugging>
+			</debugger>
+			<debugger>
+				<remote_debugging>
+					<options serial_baud="115200" />
+				</remote_debugging>
+			</debugger>
+			<debugger>
+				<remote_debugging>
+					<options ip_address="localhost" />
+				</remote_debugging>
+			</debugger>
+			<debugger>
+				<remote_debugging>
+					<options ip_port="4242" />
+				</remote_debugging>
+			</debugger>
+			<debugger>
+				<remote_debugging target="Debug" />
+			</debugger>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
